@@ -81,14 +81,29 @@
             clear: both;
         }
 
-        .projects-container {
+        .projects-container,
+        .contact-container {
             display: block;
             clear: both;
-            padding: 200px 25px;
+            padding: 200px 0 25px 0;
         }
 
-        .project-lead-line {
+        .contact-container {
+            padding: 25px 0;
+        }
+
+        .project-lead-line,
+        .contact {
             font-size: 20px;
+        }
+
+        .contact {
+            font-size: 25px;
+            padding-bottom: 25px;
+        }
+        .cell {
+            font-size: 20px;
+            padding-bottom: 10px;   
         }
 
         .project-1,
@@ -179,6 +194,13 @@
             /* Safari 和 Chrome */
         }
 
+        @media only screen and (max-width: 500px) {
+            .full-page {
+                width: 90%;
+                margin: auto;
+            }
+        }
+
         @media only screen and (min-width: 500px) {
             .lead-line {
                 font-size: 35px;
@@ -209,7 +231,8 @@
                 margin: auto;
             }
 
-            .project-lead-line {
+            .project-lead-line,
+            .contact {
                 font-size: 30px;
                 display: block;
                 width: 100%;
@@ -232,9 +255,19 @@
                 text-align: center;
             }
 
-            .projects-container {
+            .projects-container,
+            .contact-container {
                 width: 100%;
+                max-width: 750px;
+                margin: auto;
             }
+
+            .contact,
+            .cell,
+            .email {
+                display: block;
+            }
+        
 
             .right {
                 margin: auto;
@@ -324,6 +357,12 @@
                     <span class="img-text">TEACHING MUSIC ONLINE</span>
                 </a>
             </div>
+        </div>
+
+        <div class="contact-container">
+            <span class="contact">CONTACT</span>
+            <span class="cell">(610) - 764 - 3857</span>
+            <span class="email">stevenjohndesigns@gmail.com</span>
         </div>
     </div>
 </body>
