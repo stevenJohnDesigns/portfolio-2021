@@ -42,7 +42,7 @@
 
         .lead-line {
             font-size: 25px;
-            padding-bottom: 5px;
+            padding-bottom: 15px;
         }
 
         .sublead-line {
@@ -82,14 +82,27 @@
         }
 
         .projects-container,
-        .contact-container {
+        .contact-container,
+        .about-container {
             display: block;
             clear: both;
             padding: 200px 0 25px 0;
         }
 
-        .contact-container {
+        .about-container {
+            padding: 150px 0 0 0;
+        }
+
+        .about-lead-line {
+            font-size: 30px;
+        }
+
+        .bio {
             padding: 25px 0;
+        }
+
+        .contact-container {
+            padding: 25px 0 50px 0;
         }
 
         .project-lead-line,
@@ -101,9 +114,10 @@
             font-size: 25px;
             padding-bottom: 25px;
         }
+
         .cell {
             font-size: 20px;
-            padding-bottom: 10px;   
+            padding-bottom: 10px;
         }
 
         .project-1,
@@ -131,10 +145,29 @@
             animation: arrow 2s infinite;
             -webkit-animation: arrow 2s infinite;
         }
-        
+
+        .bio {
+            letter-spacing: 2px;
+        }
+
+        .contact,
+        .cell,
+        .email,
+        .about-lead-line,
+        .bio {
+            display: block;
+        }
+
+
         .social-icons {
             padding-top: 25px;
             text-align: center;
+            max-width: 250px;
+        }
+
+        .project-btn,
+        .about-btn {
+            max-width: 250px;
         }
 
         @keyframes arrow {
@@ -194,7 +227,7 @@
             /* Safari 和 Chrome */
         }
 
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 800px) {
             .full-page {
                 width: 90%;
                 margin: auto;
@@ -204,10 +237,6 @@
         @media only screen and (min-width: 500px) {
             .lead-line {
                 font-size: 35px;
-            }
-
-            .sublead-line {
-                font-size: 28px;
             }
         }
 
@@ -221,7 +250,7 @@
             }
 
             .sublead-line {
-                font-size: 32px;
+                font-size: 22px;
             }
 
             .main {
@@ -256,18 +285,13 @@
             }
 
             .projects-container,
-            .contact-container {
+            .contact-container,
+            .about-container {
                 width: 100%;
                 max-width: 750px;
                 margin: auto;
             }
 
-            .contact,
-            .cell,
-            .email {
-                display: block;
-            }
-        
 
             .right {
                 margin: auto;
@@ -292,40 +316,78 @@
             <div class="main">
                 <div class="left">
                     <div class="lead-line">Hello! I am Steven John Cantando</div>
-                    <div class="sublead-line">I am a Web Developer</div>
+                    <div class="sublead-line">I am a Front End Web Developer currently working full-time at J.W. 
+                        Pepper Sheet Music.
+                    </div>
                 </div>
                 <div class="right">
                     <div class="projects">
-                        <button class="project-btn">LATEST PROJECTS</button>
+                        <a style="color: white; text-decoration: none;" href="#project-landing">
+                            <button class="project-btn">LATEST PROJECTS</button>
+                        </a>
                     </div>
                     <div class="about-me">
-                        <button class="about-btn">ABOUT ME</button>
+                        <a style="color: white; text-decoration: none;" href="#about-landing">
+                            <button class="about-btn">ABOUT ME</button>
+                        </a>
                     </div>
                     <div class="social-icons">
-                        <a target="_blank" href="https://www.linkedin.com/in/steven-john-cantando/" style="padding-right: 15px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                              </svg> 
+                        <a target="_blank" href="https://www.linkedin.com/in/steven-john-cantando/"
+                            style="padding-right: 15px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
                         </a>
-                          <a target="_blank" href="https://github.com/stevenJohnDesigns?tab=repositories">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-github" viewBox="0 0 16 16">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                              </svg>  
-                          </a> 
+                        <a target="_blank" href="https://github.com/stevenJohnDesigns?tab=repositories">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
-            <svg class="arrows">
-                <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                <path class="a3" d="M0 40 L30 72 L60 40"></path>
-            </svg>
+            <a href="#about-landing">
+                <svg class="arrows">
+                    <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                    <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                    <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                </svg>
+            </a>
         </div>
 
-        <div class="projects-container">
+        <div id="about-landing" class="about-container">
+            <span class="about-lead-line">
+                ABOUT ME
+            </span>
+            <span class="bio">
+                Hello! I am Steven John Cantando and I am a front end Web Developer living in
+                West Chester, PA currently working full-time at J.W. Pepper Sheet Music.
+                Aside from web development, I spend most of my time working on physical fitness, photography,
+                and playing percussion instruments.
+            </span>
+        </div>
+
+
+        <div id="project-landing" class="projects-container">
             <span class="project-lead-line">
                 PROJECTS
             </span>
+            <div class="project-1">
+                <a href="https://stevenjohndesigns.github.io/nhl-page-redesign/">
+                    <img src="/images/Screenshot (42).png" alt="">
+                    <span class="img-text">NHL PAGE CLONE</span>
+                </a>
+            </div>
+            <div class="project-1">
+                <a href="https://stevenjohncantando.github.io/Train-Schedule/">
+                    <img src="/images/All Aboard Train Schedule.jpeg" alt="">
+                    <span class="img-text">ALL ABOARD TRAIN SCHEDULING APP</span>
+                </a>
+            </div>
             <div class="project-1">
                 <a href="https://www.jwpepper.com/sheet-music/welcome.jsp">
                     <img src="/images/NEW-PEPPER-HEADER.png" alt="jw pepper header" />
@@ -358,6 +420,18 @@
                 </a>
             </div>
         </div>
+
+        <!-- <div id="about-landing" class="about-container">
+            <span class="about-lead-line">
+                ABOUT ME
+            </span>
+            <span class="bio">
+                Hello! I am Steven John Cantando and I am a front end Web Developer living in
+                West Chester, PA currently working full-time at J.W. Pepper Sheet Music.
+                Aside from web development, I spend most of my time working on physical fitness, photography,
+                and playing percussion instruments.
+            </span>
+        </div> -->
 
         <div class="contact-container">
             <span class="contact">CONTACT</span>
